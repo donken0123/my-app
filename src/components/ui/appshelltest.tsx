@@ -11,7 +11,7 @@ import { useState } from 'react';
 
 
 
-export default function AppShellExample1({
+export default function AppShellExample1( {
   children,
 }: Readonly<{
   children: React.ReactNode;
