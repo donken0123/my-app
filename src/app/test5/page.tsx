@@ -1,16 +1,22 @@
 'use client';
-import { Input, Button, Card, Text, Title, Stack, Group, Loader, Alert, Container } from '@mantine/core';
-import { IconBrandTwitter, IconSearch, IconAlertCircle } from '@tabler/icons-react';
+import { Input, Button, Card, Text, Title, Stack, Group, Loader, Container } from '@mantine/core';
+import { IconBrandTwitter, IconSearch } from '@tabler/icons-react';
 import { useState } from 'react';
+
+type Tweet = {
+    text: string;
+    edit_history_tweet_ids: string[];
+    id: string; 
+};
 export default function Test5(){
     const [username,setUsername]=useState('');
-    const [tweet,setTweet]=useState<any>(null);
+    const [tweet,setTweet]=useState<Tweet|null>(null);
     const [loading,setLoading]=useState(false);
     const fetchTweets=async()=>{
         if(!username) return;
         setLoading(true);
         try{
-            const response=await fetch(`/api/users?username=${username}`).then(response=>{
+            await fetch(`/api/users?username=${username}`).then(response=>{
                 console.log(response);
                 return response.json();
             }).then(data=>{
@@ -20,11 +26,13 @@ export default function Test5(){
             }).catch(error=>{
                 console.error('Error fetching tweets:',error);
             });
+            
         }catch(error){
             console.error('Error fetching tweets:',error);
         }
         setLoading(false);
     };
+    
             return (
         <Container size="md" py="xl">
             <Stack gap="xl">

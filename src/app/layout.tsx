@@ -1,11 +1,8 @@
 import '@mantine/core/styles.css';
-import { Button, ColorSchemeScript, mantineHtmlProps, MantineProvider, Menu } from '@mantine/core';
+import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import { IconChevronDown, IconExternalLink, IconHome } from '@tabler/icons-react';
-import {Group,AppShell,Text} from "@mantine/core";
 import AppShellExample1 from '@/components/ui/appshelltest';
 
 

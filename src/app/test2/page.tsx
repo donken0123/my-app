@@ -1,11 +1,8 @@
 'use client';
 import Link from "next/link";
-import {DragDropContext,Droppable,Draggable} from 'react-beautiful-dnd';
-import { Span } from "next/dist/trace";
 import { useState,useEffect, useRef } from "react";
-import { useRouter,usePathname } from "next/navigation";
-import{Button, Group, Menu, Modal} from '@mantine/core';
-import{useDisclosure} from "@mantine/hooks"
+import { useRouter } from "next/navigation";
+
 
 
 // 動態導入 react-beautiful-dnd 以避免 SSR 問題
@@ -30,14 +27,13 @@ import{useDisclosure} from "@mantine/hooks"
     
 
 
-export default function home(){
+export default function Home(){
     const router=useRouter();
-    const [opened, { open, close ,toggle }] = useDisclosure(false);
-    const [opened2, modal2handle] = useDisclosure(false);
+    
     const [isModalOpen, setIsModalOpen]=useState<boolean>(false);
     const [selectedTodo, setSelectedTodo]=useState<todolist | null>(null);
     //const [todos, setTodos]=useState<todolist[]>(localStorage?JSON.parse('todos'):[]);
-    const [newTodoText, setNewTodoText]=useState<string>(new Date().toISOString().split('T')[0]);
+    const newTodoText = new Date().toISOString().split('T')[0];
     const [newTodoDueDate, setNewTodoDueDate]=useState<string>('');
     const [editingDueDate, setEditingDueDate]=useState<string>('');
     const [research, setResearch]=useState<string>('');

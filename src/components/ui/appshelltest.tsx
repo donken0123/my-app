@@ -1,7 +1,7 @@
 "use client"
-import { AppShell, Badge, Burger, Button, Group, Menu, Text, Stack, Flex, ActionIcon, Avatar } from '@mantine/core';
+import { AppShell, Badge, Burger, Button, Group, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconExternalLink, IconBell, IconUser, IconSettings, IconSearch, IconMenu2, IconHome, IconChevronDown } from '@tabler/icons-react';
+import { IconExternalLink } from '@tabler/icons-react';
 import Link from "next/link";
 import { useState } from 'react';
 

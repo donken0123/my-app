@@ -1,9 +1,7 @@
 "use client"
 import { Button, Group, Menu } from "@mantine/core";
-import { IconHome, IconExternalLink } from "@tabler/icons-react";
+import { IconExternalLink } from "@tabler/icons-react";
 import Link from "next/link";
-import { forwardRef } from 'react';
-import{useDisclosure} from "@mantine/hooks"
 export default function Nav() {
     return (
         <nav>

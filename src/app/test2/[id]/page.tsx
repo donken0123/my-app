@@ -1,12 +1,11 @@
 
 'use client';
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { use } from 'react';
 
 export default function TodoDetail({ params }: { params: Promise<{ id: string }> }) {
     const unwrappedParams = use(params);
-    const router = useRouter();
     const searchParams = useSearchParams();
     const id = unwrappedParams.id;
     const category = searchParams.get('category');
