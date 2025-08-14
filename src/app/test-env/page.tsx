@@ -35,7 +35,7 @@ export default function TestEnvPage() {
 
   return (
     <div className="p-8 max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">環境變數測試</h1>
+      <h1 className="text-2xl font-bold mb-4">環境變數測量1</h1>
       
       {loading ? (
         <p>檢查中...</p>
