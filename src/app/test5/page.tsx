@@ -40,7 +40,7 @@ export default function Test5(){
                 <Group justify="center" gap="md">
                     <IconBrandTwitter size={32} color="#1da1f2" />
                     <Title order={1} c="blue" ta="center">
-                        Twitter 最新推文獲取18
+                        Twitter 最新推文獲取器1212
                     </Title>
                 </Group>
                 
